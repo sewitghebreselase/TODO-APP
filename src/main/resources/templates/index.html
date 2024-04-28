@@ -1,0 +1,116 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>ToDo Application Dashboard</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            background-color: #f4f4f4;-->
+<!--        }-->
+
+<!--        header, footer {-->
+<!--            background-color: #333;-->
+<!--            color: white;-->
+<!--            text-align: center;-->
+<!--            padding: 1em 0;-->
+<!--        }-->
+
+<!--        h1, h2 {-->
+<!--            color: #333;-->
+<!--        }-->
+
+<!--        table {-->
+<!--            width: 100%;-->
+<!--            margin-bottom: 2em;-->
+<!--            border-collapse: collapse;-->
+<!--        }-->
+
+<!--        table, th, td {-->
+<!--            border: 1px solid #dddddd;-->
+<!--        }-->
+
+<!--        th, td {-->
+<!--            text-align: left;-->
+<!--            padding: 8px;-->
+<!--        }-->
+
+<!--        th {-->
+<!--            background-color: #333;-->
+<!--            color: white;-->
+<!--        }-->
+
+<!--        tr:nth-child(even) {-->
+<!--            background-color: #f2f2f2;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<header>-->
+<!--    <h1>Welcome to the ToDo Application Dashboard!</h1>-->
+<!--</header>-->
+<!--<section>-->
+<!--    <h2>Users</h2>-->
+<!--    <table>-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>ID</th>-->
+<!--            <th>Email</th>-->
+<!--            <th>Name</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr th:each="user : ${users}">-->
+<!--            <td th:text="${user.id}">User ID</td>-->
+<!--            <td th:text="${user.email}">User Email</td>-->
+<!--            <td th:text="${user.name}">User Name</td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</section>-->
+<!--<section>-->
+<!--    <h2>Tasks</h2>-->
+<!--    <table>-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>ID</th>-->
+<!--            <th>Title</th>-->
+<!--            <th>Description</th>-->
+<!--            <th>Due Date</th>-->
+<!--            <th>Priority</th>-->
+<!--            <th>Status</th>-->
+<!--            <th>Action</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr th:each="task : ${tasks}">-->
+<!--            <td th:text="${task.id}">Task ID</td>-->
+<!--            <td th:text="${task.title}">Task Title</td>-->
+<!--            <td th:text="${task.description}">Task Description</td>-->
+<!--            <td th:text="${task.dueDate}">Due Date</td>-->
+<!--            <td th:text="${task.priority}">Priority</td>-->
+<!--            <td th:text="${task.isCompleted ? 'Completed' : 'Pending'}">Status</td>-->
+<!--            <td>-->
+<!--                <button onclick="confirmDelete(this, /* Task ID */)">Delete</button>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</section>-->
+<!--<footer>-->
+<!--    <p>ToDo Application &copy; 2024</p>-->
+<!--</footer>-->
+<!--<script>-->
+<!--    function confirmDelete(button, taskId) {-->
+<!--        if (confirm('Are you sure you want to delete this task?')) {-->
+<!--            // Implement the delete logic, possibly sending an AJAX request to your server-->
+<!--            console.log('Task with ID ' + taskId + ' will be deleted');-->
+<!--            // You might need to remove the task row from the table after confirmation-->
+<!--            // button.parentElement.parentElement.remove();-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
