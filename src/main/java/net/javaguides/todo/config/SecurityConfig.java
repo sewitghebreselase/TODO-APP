@@ -38,15 +38,16 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/swagger-ui.html", "/swagger-ui/**",
-                                        "/swagger-resources/*",
-                                        "/v3/api-docs/**")
-                                .permitAll()
-                                .requestMatchers("/uaa/*").hasAuthority("all")
-                                .requestMatchers("/api/todos/*").hasAuthority("all")
+//                                .requestMatchers("/swagger-ui.html", "/swagger-ui/**",
+//                                        "/swagger-resources/*",
+//                                        "/v3/api-docs/**")
+//                                .permitAll()
+//                                .requestMatchers("/uaa/*").hasAuthority("all")
+//                                .requestMatchers("/api/todos/*").hasAuthority("all")
 
-                                .anyRequest()
-                                .authenticated())
+                                .anyRequest().permitAll()
+//                                .authenticated()
+                )
                 .sessionManagement(manager -> manager.sessionCreationPolicy(STATELESS));
 
         httpSecurity.authenticationProvider(authenticationProvider());
